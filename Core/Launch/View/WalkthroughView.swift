@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct WalkthroughView: View {
-    /// View Properties
     @State private var activeIntro: PageIntro = pageIntros[0]
     @State private var emailID: String = ""
     @State private var keyboardHeight: CGFloat = 0
@@ -22,7 +21,7 @@ struct WalkthroughView: View {
                 IntroView(intro: $activeIntro, size: size) {
                     VStack(spacing: 10) {
                         /// Custom TextField
-                        WalkthroughTextField(text: $emailID, hint: "Email Address", leadingIcon: Image(systemName: "envelope"))
+                        WalkthroughTextField(text: $emailID, hint: "Email Address or Username", leadingIcon: Image(systemName: "envelope"))
 
                         Spacer(minLength: 10)
 
@@ -32,9 +31,17 @@ struct WalkthroughView: View {
                         .hidden()
 
                         Button(action: {
-                            // Handle login/signup action here
                             shouldNavigateToHome = true
                             print("Continue button tapped")
+                            requestNotificationPermission { granted in
+                            if granted {
+                            // Permission granted, now schedule the notification
+                                sendWelcomePushNotification(email: emailID)
+                            } else {
+                            // Permission denied, handle accordingly
+                            print("Unable to schedule notification due to permission denial.")
+                            }
+                        }
                         }) {
                             Text("Continue")
                                 .fontWeight(.semibold)
@@ -43,15 +50,13 @@ struct WalkthroughView: View {
                                 .frame(maxWidth: .infinity)
                                 .background(Capsule().fill(Color.black))
                         }
-                        .padding(.horizontal) // Add padding here
+                        .padding(.horizontal)
                     }
                 }
             }
         }
         .padding(15)
-        /// Manual Keyboard Push
         .offset(y: -keyboardHeight)
-        /// Disabling Native Keyboard Push
         .ignoresSafeArea(.keyboard, edges: .all)
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { output in
             if let info = output.userInfo, let height = (info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height {

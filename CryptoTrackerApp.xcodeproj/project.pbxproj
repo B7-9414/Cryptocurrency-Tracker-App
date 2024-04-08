@@ -19,6 +19,10 @@
 		58D33D782BC298B900057B88 /* WalkthroughTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D33D772BC298B900057B88 /* WalkthroughTextField.swift */; };
 		58D33D7A2BC299F600057B88 /* WalkthroughIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D33D792BC299F600057B88 /* WalkthroughIndicatorView.swift */; };
 		58D33D7C2BC29B0800057B88 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D33D7B2BC29B0800057B88 /* HomeView.swift */; };
+		58D33D7E2BC3416600057B88 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D33D7D2BC3416600057B88 /* LaunchView.swift */; };
+		58D33D802BC3427D00057B88 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D33D7F2BC3427D00057B88 /* Color.swift */; };
+		58D33D822BC343BC00057B88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D33D812BC343BC00057B88 /* LaunchScreen.storyboard */; };
+		58D33D862BC355B300057B88 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D33D852BC355B300057B88 /* PushNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		58D33D772BC298B900057B88 /* WalkthroughTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughTextField.swift; sourceTree = "<group>"; };
 		58D33D792BC299F600057B88 /* WalkthroughIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughIndicatorView.swift; sourceTree = "<group>"; };
 		58D33D7B2BC29B0800057B88 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		58D33D7D2BC3416600057B88 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		58D33D7F2BC3427D00057B88 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		58D33D812BC343BC00057B88 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		58D33D852BC355B300057B88 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 		58D33D662BC2392100057B88 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				58D33D7F2BC3427D00057B88 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -116,6 +125,7 @@
 		58D33D682BC2398800057B88 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				58D33D852BC355B300057B88 /* PushNotification.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 				58D33D732BC2972A00057B88 /* WalkthroughView.swift */,
 				58D33D772BC298B900057B88 /* WalkthroughTextField.swift */,
 				58D33D792BC299F600057B88 /* WalkthroughIndicatorView.swift */,
+				58D33D7D2BC3416600057B88 /* LaunchView.swift */,
+				58D33D812BC343BC00057B88 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D33D822BC343BC00057B88 /* LaunchScreen.storyboard in Resources */,
 				58D33D5A2BC235FE00057B88 /* Preview Assets.xcassets in Resources */,
 				58D33D572BC235FE00057B88 /* Assets.xcassets in Resources */,
 			);
@@ -258,9 +271,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				58D33D5C2BC235FE00057B88 /* Persistence.swift in Sources */,
+				58D33D7E2BC3416600057B88 /* LaunchView.swift in Sources */,
 				58D33D552BC235FC00057B88 /* ContentView.swift in Sources */,
+				58D33D862BC355B300057B88 /* PushNotification.swift in Sources */,
 				58D33D532BC235FC00057B88 /* CryptoTrackerAppApp.swift in Sources */,
 				58D33D7C2BC29B0800057B88 /* HomeView.swift in Sources */,
+				58D33D802BC3427D00057B88 /* Color.swift in Sources */,
 				58D33D6C2BC2956E00057B88 /* ColorfulIconLabelStyle.swift in Sources */,
 				58D33D5F2BC235FE00057B88 /* CryptoTrackerApp.xcdatamodeld in Sources */,
 				58D33D762BC2982B00057B88 /* PageIntro.swift in Sources */,
@@ -405,6 +421,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -433,6 +450,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
