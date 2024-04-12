@@ -11,6 +11,10 @@
 		580BD8FA2BC7CB6800AD7FE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD8F92BC7CB6800AD7FE0 /* LoginViewModel.swift */; };
 		580BD8FC2BC8823800AD7FE0 /* HapticVibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD8FB2BC8823800AD7FE0 /* HapticVibrationManager.swift */; };
 		580BD8FE2BC8848300AD7FE0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD8FD2BC8848300AD7FE0 /* Data.swift */; };
+		580BD9022BC9C28D00AD7FE0 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD9012BC9C28D00AD7FE0 /* SettingsViewModel.swift */; };
+		580BD9062BC9C2D500AD7FE0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD9052BC9C2D500AD7FE0 /* SettingsView.swift */; };
+		580BD9082BC9C2E600AD7FE0 /* PrivacySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD9072BC9C2E600AD7FE0 /* PrivacySettingsView.swift */; };
+		580BD90B2BC9EC6600AD7FE0 /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD90A2BC9EC6600AD7FE0 /* XMarkButton.swift */; };
 		58A54C792BC6214E005C46A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A54C782BC6214E005C46A5 /* Constants.swift */; };
 		58A54C7C2BC62242005C46A5 /* KeyChainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A54C7B2BC62242005C46A5 /* KeyChainHelper.swift */; };
 		58A54C7E2BC62361005C46A5 /* KeyChainPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A54C7D2BC62361005C46A5 /* KeyChainPropertyWrapper.swift */; };
@@ -38,6 +42,10 @@
 		580BD8F92BC7CB6800AD7FE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		580BD8FB2BC8823800AD7FE0 /* HapticVibrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticVibrationManager.swift; sourceTree = "<group>"; };
 		580BD8FD2BC8848300AD7FE0 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		580BD9012BC9C28D00AD7FE0 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		580BD9052BC9C2D500AD7FE0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		580BD9072BC9C2E600AD7FE0 /* PrivacySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySettingsView.swift; sourceTree = "<group>"; };
+		580BD90A2BC9EC6600AD7FE0 /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		58A54C782BC6214E005C46A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		58A54C7B2BC62242005C46A5 /* KeyChainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainHelper.swift; sourceTree = "<group>"; };
 		58A54C7D2BC62361005C46A5 /* KeyChainPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainPropertyWrapper.swift; sourceTree = "<group>"; };
@@ -72,6 +80,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		580BD8FF2BC9C25800AD7FE0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				580BD9032BC9C29A00AD7FE0 /* View */,
+				580BD9002BC9C26E00AD7FE0 /* ViewModel */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		580BD9002BC9C26E00AD7FE0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				580BD9012BC9C28D00AD7FE0 /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		580BD9032BC9C29A00AD7FE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				580BD9042BC9C2B000AD7FE0 /* SubViews */,
+				580BD9052BC9C2D500AD7FE0 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		580BD9042BC9C2B000AD7FE0 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				580BD9072BC9C2E600AD7FE0 /* PrivacySettingsView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		580BD9092BC9EC4C00AD7FE0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				580BD90A2BC9EC6600AD7FE0 /* XMarkButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		58A54C7A2BC62232005C46A5 /* KeyChain */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +213,8 @@
 		58D33D692BC239A000057B88 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				580BD9092BC9EC4C00AD7FE0 /* Components */,
+				580BD8FF2BC9C25800AD7FE0 /* Settings */,
 				58D33D702BC2967B00057B88 /* Launch */,
 				58D33D6D2BC2960D00057B88 /* Home */,
 			);
@@ -303,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58D33D5C2BC235FE00057B88 /* Persistence.swift in Sources */,
+				580BD9062BC9C2D500AD7FE0 /* SettingsView.swift in Sources */,
 				58D33D7E2BC3416600057B88 /* LaunchView.swift in Sources */,
 				58D33D552BC235FC00057B88 /* ContentView.swift in Sources */,
 				58D33D862BC355B300057B88 /* PushNotification.swift in Sources */,
@@ -315,12 +368,15 @@
 				58D33D6C2BC2956E00057B88 /* ColorfulIconLabelStyle.swift in Sources */,
 				58D33D5F2BC235FE00057B88 /* CryptoTrackerApp.xcdatamodeld in Sources */,
 				580BD8F82BC7CAAF00AD7FE0 /* LoginScreen.swift in Sources */,
+				580BD9082BC9C2E600AD7FE0 /* PrivacySettingsView.swift in Sources */,
 				58A54C7E2BC62361005C46A5 /* KeyChainPropertyWrapper.swift in Sources */,
 				580BD8FC2BC8823800AD7FE0 /* HapticVibrationManager.swift in Sources */,
 				58D33D762BC2982B00057B88 /* PageIntro.swift in Sources */,
 				58D33D782BC298B900057B88 /* WalkthroughTextField.swift in Sources */,
 				58A54C792BC6214E005C46A5 /* Constants.swift in Sources */,
 				58D33D742BC2972A00057B88 /* WalkthroughView.swift in Sources */,
+				580BD90B2BC9EC6600AD7FE0 /* XMarkButton.swift in Sources */,
+				580BD9022BC9C28D00AD7FE0 /* SettingsViewModel.swift in Sources */,
 				580BD8FA2BC7CB6800AD7FE0 /* LoginViewModel.swift in Sources */,
 				58D33D7A2BC299F600057B88 /* WalkthroughIndicatorView.swift in Sources */,
 			);
