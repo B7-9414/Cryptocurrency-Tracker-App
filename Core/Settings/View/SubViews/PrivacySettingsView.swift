@@ -39,6 +39,7 @@ struct PrivacySettingsView: View {
             autoLockTimeDialogMenu
         }
     }
+
 }
 
 
@@ -86,5 +87,44 @@ extension PrivacySettingsView {
             vm.appAutoLockTimeSeconds = 60
         }
         
+        Button("if away for 5 minute") {
+            vm.appAutoLockTimeSeconds = 5 * 60
+        }
+        
+        Button("if away for 10 minutes") {
+            vm.appAutoLockTimeSeconds = 10 * 60
+        }
+    }
+}
+
+// The only purpose of this view is one bug with FocusState
+// It doesn't work within main view, so i made one view extra...
+fileprivate struct PasswordTextFieldView: View {
+    @FocusState private var isPasswordTextFieldFocused: Bool
+    @EnvironmentObject private var vm: SettingsViewModel
+    
+    var body: some View {
+        ZStack {
+            TextField("Enter your username", text: $vm.passwordText)
+                .focused($isPasswordTextFieldFocused)
+                .keyboardType(.numberPad)
+                .onReceive(Just($vm.passwordText)) { newValue in
+                    let filtered = newValue.wrappedValue.filter { "0123456789".contains($0) }
+                    if filtered != newValue.wrappedValue {
+                        vm.passwordText = filtered
+                    }
+
+                }
+            
+            Color.theme.background.ignoresSafeArea()
+            
+            Text(vm.passwordText)
+                .foregroundColor(.white)
+        }
+        .task {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.isPasswordTextFieldFocused = true
+            }
+        }
     }
 }

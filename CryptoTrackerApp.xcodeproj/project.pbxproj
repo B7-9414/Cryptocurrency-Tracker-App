@@ -15,6 +15,8 @@
 		580BD9062BC9C2D500AD7FE0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD9052BC9C2D500AD7FE0 /* SettingsView.swift */; };
 		580BD9082BC9C2E600AD7FE0 /* PrivacySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD9072BC9C2E600AD7FE0 /* PrivacySettingsView.swift */; };
 		580BD90B2BC9EC6600AD7FE0 /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD90A2BC9EC6600AD7FE0 /* XMarkButton.swift */; };
+		580BD90E2BCCAC5900AD7FE0 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD90D2BCCAC5900AD7FE0 /* CircleButtonView.swift */; };
+		580BD9102BCCAC7C00AD7FE0 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD90F2BCCAC7C00AD7FE0 /* CircleButtonAnimationView.swift */; };
 		58A54C792BC6214E005C46A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A54C782BC6214E005C46A5 /* Constants.swift */; };
 		58A54C7C2BC62242005C46A5 /* KeyChainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A54C7B2BC62242005C46A5 /* KeyChainHelper.swift */; };
 		58A54C7E2BC62361005C46A5 /* KeyChainPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A54C7D2BC62361005C46A5 /* KeyChainPropertyWrapper.swift */; };
@@ -46,6 +48,8 @@
 		580BD9052BC9C2D500AD7FE0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		580BD9072BC9C2E600AD7FE0 /* PrivacySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySettingsView.swift; sourceTree = "<group>"; };
 		580BD90A2BC9EC6600AD7FE0 /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
+		580BD90D2BCCAC5900AD7FE0 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		580BD90F2BCCAC7C00AD7FE0 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		58A54C782BC6214E005C46A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		58A54C7B2BC62242005C46A5 /* KeyChainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainHelper.swift; sourceTree = "<group>"; };
 		58A54C7D2BC62361005C46A5 /* KeyChainPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainPropertyWrapper.swift; sourceTree = "<group>"; };
@@ -117,9 +121,19 @@
 		580BD9092BC9EC4C00AD7FE0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				580BD90C2BCCAC4B00AD7FE0 /* CircleButton */,
 				580BD90A2BC9EC6600AD7FE0 /* XMarkButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		580BD90C2BCCAC4B00AD7FE0 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				580BD90D2BCCAC5900AD7FE0 /* CircleButtonView.swift */,
+				580BD90F2BCCAC7C00AD7FE0 /* CircleButtonAnimationView.swift */,
+			);
+			path = CircleButton;
 			sourceTree = "<group>";
 		};
 		58A54C7A2BC62232005C46A5 /* KeyChain */ = {
@@ -368,6 +382,7 @@
 				58D33D6C2BC2956E00057B88 /* ColorfulIconLabelStyle.swift in Sources */,
 				58D33D5F2BC235FE00057B88 /* CryptoTrackerApp.xcdatamodeld in Sources */,
 				580BD8F82BC7CAAF00AD7FE0 /* LoginScreen.swift in Sources */,
+				580BD9102BCCAC7C00AD7FE0 /* CircleButtonAnimationView.swift in Sources */,
 				580BD9082BC9C2E600AD7FE0 /* PrivacySettingsView.swift in Sources */,
 				58A54C7E2BC62361005C46A5 /* KeyChainPropertyWrapper.swift in Sources */,
 				580BD8FC2BC8823800AD7FE0 /* HapticVibrationManager.swift in Sources */,
@@ -378,6 +393,7 @@
 				580BD90B2BC9EC6600AD7FE0 /* XMarkButton.swift in Sources */,
 				580BD9022BC9C28D00AD7FE0 /* SettingsViewModel.swift in Sources */,
 				580BD8FA2BC7CB6800AD7FE0 /* LoginViewModel.swift in Sources */,
+				580BD90E2BCCAC5900AD7FE0 /* CircleButtonView.swift in Sources */,
 				58D33D7A2BC299F600057B88 /* WalkthroughIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
