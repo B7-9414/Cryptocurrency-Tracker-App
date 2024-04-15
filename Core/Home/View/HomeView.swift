@@ -7,34 +7,50 @@
 
 import SwiftUI
 
+
 struct HomeView: View {
+    @State private var showPortfolioCoinsList: Bool = false     // animate button
+    @State private var showPortfolioSheet: Bool = false // show new sheet
+    @State private var showSettingsView: Bool = false
     var body: some View {
         VStack {
             // WalkthroughView()
             //SettingsView()
-            homeHeader 
+            homeHeader
         }
     }
     private var homeHeader: some View {
-            HStack {
-                CircleButtonView(iconName: "gear")
-                
-                Spacer()
-                
-                Text("Prices")
-                    .font(.headline)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.black)
-                    .animation(.none)
-                
-                Spacer()
-                
-                CircleButtonView(iconName: "chevron.right")
-                    .rotationEffect(Angle(degrees: 0))
-                    .onTapGesture {
-                
+        HStack {
+            CircleButtonView(iconName: showPortfolioCoinsList ? "plus" : "gear")
+                .onTapGesture {
+                    if showPortfolioCoinsList {
+                        showPortfolioSheet.toggle()
+                    } else {
+                        showSettingsView.toggle()
                     }
-            }
-            .padding(.horizontal)
+                }
+                .animation(.none, value: showPortfolioCoinsList)
+                .background(CircleButtonAnimationView(animate: $showPortfolioCoinsList))
+            
+            Spacer()
+            
+            Text(showPortfolioCoinsList ? "Wallet" : "Prices")
+                .font(.headline)
+                .fontWeight(.heavy)
+                .foregroundColor(.theme.accent)
+                .animation(.none)
+            
+            Spacer()
+            
+            CircleButtonView(iconName: "chevron.right")
+                .rotationEffect(Angle(degrees: showPortfolioCoinsList ? 180 : 0))
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        showPortfolioCoinsList.toggle()
+                    }
+                }
         }
+        .padding(.horizontal)
+        
     }
+}
