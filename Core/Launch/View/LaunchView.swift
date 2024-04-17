@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LaunchView: View {
+    @EnvironmentObject var vm: LoginViewModel
     @State private var loadingText = "Loading coins..."
     @State private var textOpacity = 1.0
     
