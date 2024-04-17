@@ -25,6 +25,10 @@
 		580BD91C2BCF723700AD7FE0 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD91B2BCF723700AD7FE0 /* Statistic.swift */; };
 		580BD91E2BCF728C00AD7FE0 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD91D2BCF728C00AD7FE0 /* GlobalData.swift */; };
 		580BD9202BCF74E400AD7FE0 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD91F2BCF74E400AD7FE0 /* Double.swift */; };
+		580BD9222BCF9ED100AD7FE0 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD9212BCF9ED100AD7FE0 /* StatisticView.swift */; };
+		580BD9242BCFA06E00AD7FE0 /* HomeStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD9232BCFA06E00AD7FE0 /* HomeStatisticView.swift */; };
+		580BD9262BCFA1D300AD7FE0 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD9252BCFA1D300AD7FE0 /* SearchBarView.swift */; };
+		580BD9282BCFA4AD00AD7FE0 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BD9272BCFA4AD00AD7FE0 /* UIApplication.swift */; };
 		58A54C792BC6214E005C46A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A54C782BC6214E005C46A5 /* Constants.swift */; };
 		58A54C7C2BC62242005C46A5 /* KeyChainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A54C7B2BC62242005C46A5 /* KeyChainHelper.swift */; };
 		58A54C7E2BC62361005C46A5 /* KeyChainPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A54C7D2BC62361005C46A5 /* KeyChainPropertyWrapper.swift */; };
@@ -66,6 +70,10 @@
 		580BD91B2BCF723700AD7FE0 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		580BD91D2BCF728C00AD7FE0 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		580BD91F2BCF74E400AD7FE0 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		580BD9212BCF9ED100AD7FE0 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		580BD9232BCFA06E00AD7FE0 /* HomeStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatisticView.swift; sourceTree = "<group>"; };
+		580BD9252BCFA1D300AD7FE0 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		580BD9272BCFA4AD00AD7FE0 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		58A54C782BC6214E005C46A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		58A54C7B2BC62242005C46A5 /* KeyChainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainHelper.swift; sourceTree = "<group>"; };
 		58A54C7D2BC62361005C46A5 /* KeyChainPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainPropertyWrapper.swift; sourceTree = "<group>"; };
@@ -139,6 +147,8 @@
 			children = (
 				580BD90C2BCCAC4B00AD7FE0 /* CircleButton */,
 				580BD90A2BC9EC6600AD7FE0 /* XMarkButton.swift */,
+				580BD9232BCFA06E00AD7FE0 /* HomeStatisticView.swift */,
+				580BD9252BCFA1D300AD7FE0 /* SearchBarView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -221,6 +231,7 @@
 				58A54C7F2BC64D35005C46A5 /* LAContext.swift */,
 				580BD8FD2BC8848300AD7FE0 /* Data.swift */,
 				580BD91F2BCF74E400AD7FE0 /* Double.swift */,
+				580BD9272BCFA4AD00AD7FE0 /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				58D33D7B2BC29B0800057B88 /* HomeView.swift */,
+				580BD9212BCF9ED100AD7FE0 /* StatisticView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,7 +404,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580BD9282BCFA4AD00AD7FE0 /* UIApplication.swift in Sources */,
 				58D33D5C2BC235FE00057B88 /* Persistence.swift in Sources */,
+				580BD9242BCFA06E00AD7FE0 /* HomeStatisticView.swift in Sources */,
 				580BD9062BC9C2D500AD7FE0 /* SettingsView.swift in Sources */,
 				58D33D7E2BC3416600057B88 /* LaunchView.swift in Sources */,
 				58D33D552BC235FC00057B88 /* ContentView.swift in Sources */,
@@ -403,6 +417,7 @@
 				58A54C802BC64D35005C46A5 /* LAContext.swift in Sources */,
 				580BD8FE2BC8848300AD7FE0 /* Data.swift in Sources */,
 				58A54C7C2BC62242005C46A5 /* KeyChainHelper.swift in Sources */,
+				580BD9262BCFA1D300AD7FE0 /* SearchBarView.swift in Sources */,
 				58D33D802BC3427D00057B88 /* Color.swift in Sources */,
 				58D33D6C2BC2956E00057B88 /* ColorfulIconLabelStyle.swift in Sources */,
 				580BD9202BCF74E400AD7FE0 /* Double.swift in Sources */,
@@ -422,6 +437,7 @@
 				58D33D742BC2972A00057B88 /* WalkthroughView.swift in Sources */,
 				580BD90B2BC9EC6600AD7FE0 /* XMarkButton.swift in Sources */,
 				580BD9022BC9C28D00AD7FE0 /* SettingsViewModel.swift in Sources */,
+				580BD9222BCF9ED100AD7FE0 /* StatisticView.swift in Sources */,
 				580BD9182BCE03FA00AD7FE0 /* CoinModel.swift in Sources */,
 				580BD8FA2BC7CB6800AD7FE0 /* LoginViewModel.swift in Sources */,
 				580BD91C2BCF723700AD7FE0 /* Statistic.swift in Sources */,
@@ -560,6 +576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CryptoTrackerApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 2P5F4TVK36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -568,6 +585,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,6 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CryptoTrackerApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 2P5F4TVK36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -597,6 +616,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
