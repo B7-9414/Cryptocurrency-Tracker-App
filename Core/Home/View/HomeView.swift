@@ -9,8 +9,9 @@ import SwiftUI
 
 
 struct HomeView: View {
-    @State private var showPortfolioCoinsList: Bool = false     // animate button
+    @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolioSheet: Bool = false // show new sheet
+    @State private var showPortfolioCoinsList: Bool = false     // animate button
     @State private var showSettingsView: Bool = false
     var body: some View {
         VStack {

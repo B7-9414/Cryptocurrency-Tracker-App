@@ -7,7 +7,11 @@
 
 import Foundation
 class HomeViewModel: ObservableObject {
+    @Published var allCoins: [Coin] = []
+    @Published var portfolioCoins: [Coin] = []
+    @Published var searchText: String = ""
     @Published var isLoading: Bool = false
+    @Published var stats: [Statistic] = []
     private let coinDataService = CoinDataService()
 
     func reloadData() {
