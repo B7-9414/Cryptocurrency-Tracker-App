@@ -13,10 +13,12 @@ class HomeViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var stats: [Statistic] = []
     private let coinDataService = CoinDataService()
+    private let marketDataService = MarketDataService()
 
     func reloadData() {
         isLoading = true
         coinDataService.getCoins()
+        marketDataService.getData()
         HapticVibrationManager.notification(type: .success)
     }
     private func mapGlobalMarketData(marketDataModel: MarketData?, portfolioCoins: [Coin]) -> [Statistic] {
