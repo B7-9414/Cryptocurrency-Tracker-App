@@ -33,12 +33,12 @@ import Foundation
          "max_supply": 21000000,
          "ath": 64805,
          "ath_change_percentage": -39.59337,
-         "ath_date": "2021-04-14T11:54:46.763Z",
+         "ath_date": "2024-04-14T11:54:46.763Z",
          "atl": 67.81,
          "atl_change_percentage": 57630.31299,
          "atl_date": "2013-07-06T00:00:00.000Z",
          "roi": null,
-         "last_updated": "2021-05-27T22:14:17.678Z",
+         "last_updated": "2024-04-27T22:14:17.678Z",
          "sparkline_in_7d": {
          "price": [
              40109.30184969603,
