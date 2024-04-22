@@ -28,22 +28,6 @@ struct SettingsView: View {
                                 .labelStyle(ColorfulIconLabelStyle(color: .blue))
                         }
 
-                        NavigationLink(destination: {
-                            Text("Coming soon!")
-
-                        }) {
-                            Label("Appearance", systemImage: "paintbrush.pointed.fill")
-                                .labelStyle(ColorfulIconLabelStyle(color: .theme.green))
-                        }
-
-                    }
-                    
-                    Section {
-                        Button("About") {
-                            showAppInfoView.toggle()
-                        }
-                    }
-                    .sheet(isPresented: $showAppInfoView) {
                     }
                 }
             }
