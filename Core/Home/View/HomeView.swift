@@ -20,7 +20,12 @@ struct HomeView: View {
 //            StatisticView(stat: <#Statistic#>)
 //            SearchBarView(searchText: Binding<String>)
             //homeHeader
-            //MarketDataService ====> just for testing
+            //MarketDataService
+//             ChartView
+//             DetailView
+//            DetailView
+            
+            
         }
     }
     private var homeHeader: some View {
