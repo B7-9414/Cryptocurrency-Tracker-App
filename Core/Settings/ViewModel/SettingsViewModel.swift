@@ -12,7 +12,6 @@ import Combine
 class SettingsViewModel: ObservableObject {
     @KeyChain(key: Constants.KeyChain.pincodeKey, account: Constants.KeyChain.account) var userPincode
     @AppStorage(Constants.AppSettings.Privacy.isPasswordSecurityActive) var isPasswordSecurityActive: Bool = false
-    @AppStorage(Constants.AppSettings.Privacy.appAutoLockTime) var appAutoLockTimeSeconds: Int = 5 * 60
     @AppStorage(Constants.AppSettings.Privacy.useBiometryToUnlock) var useBiometryToUnlock: Bool = false
     @Published var passwordText: String = ""
     @Published var showPasswordInputView: Bool = false

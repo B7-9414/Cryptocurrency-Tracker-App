@@ -24,7 +24,7 @@ var body: some View {
                 vm.searchText = ""
                 vm.selectedCoin = nil
             }) {
-                PortfolioView()
+                AppInfoView()
                     .environmentObject(vm)
             }
         
@@ -202,7 +202,11 @@ private var columnTitles: some View {
         columnTitleCoin
         
         Spacer()
- 
+        
+        if showPortfolioCoinsList {
+            columnTitleHoldings
+        }
+        
         columnTitlePrice
 
         
@@ -229,6 +233,22 @@ private var columnTitleCoin: some View {
     }
 }
 
+private var columnTitleHoldings: some View {
+    HStack(spacing: 4) {
+        Text("Holdings")
+        Image(systemName: "chevron.down")
+            .opacity(
+                vm.sortOption == .holdings ||
+                vm.sortOption == .holdingsReversed ? 1 : 0
+            )
+            .rotationEffect(Angle(degrees: vm.sortOption == .holdings ? 0 : 180))
+    }
+    .onTapGesture {
+        withAnimation(.default) {
+            vm.sortOption = vm.sortOption == .holdings ? .holdingsReversed : .holdings
+        }
+    }
+}
 
 private var columnTitlePrice: some View {
     HStack(spacing: 4) {

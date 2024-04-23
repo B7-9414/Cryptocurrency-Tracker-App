@@ -13,7 +13,6 @@ extension Constants {
     struct AppSettings {
         struct Privacy {
             static let isPasswordSecurityActive: String = "isPasswordSecurityActive"
-            static let appAutoLockTime: String = "appAutoLockTime"
             static let useBiometryToUnlock: String = "useBiometryToUnlock"
             // needs to check when user last time used the app, before it was send in background
             static let lastActiveSessionTimestamp: String = "lastACtiveSessionTimestamp"

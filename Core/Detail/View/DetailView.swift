@@ -54,11 +54,6 @@ struct DetailView: View {
             }
         }
         .navigationTitle(vm.coin.name)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-               navigationBarTrailingItem
-            }
-        }
     }
 }
 

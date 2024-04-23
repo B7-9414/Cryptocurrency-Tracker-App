@@ -11,7 +11,7 @@ struct RootView: View {
     @StateObject private var homeVM = HomeViewModel()
     @StateObject private var loginVM = LoginViewModel()
     @Environment(\.scenePhase) private var scenePhase
-    @AppStorage("hasCompletedWalkthrough") private var hasCompletedWalkthrough = false 
+//    @AppStorage("hasCompletedWalkthrough") private var hasCompletedWalkthrough = false 
     
 //    var body: some View {
 //        ZStack {

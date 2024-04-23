@@ -30,6 +30,7 @@ struct LaunchView: View {
             }
             .onAppear {
                 Task {
+                    await vm.tryMakeBiometryAuth()
                 }
                 
                 withAnimation(.linear(duration: 1.3).repeatForever(autoreverses: true)) {
