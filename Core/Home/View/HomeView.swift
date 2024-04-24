@@ -24,7 +24,8 @@ var body: some View {
                 vm.searchText = ""
                 vm.selectedCoin = nil
             }) {
-                AppInfoView()
+//                AppInfoView()
+                    PortfolioView()
                     .environmentObject(vm)
             }
         
@@ -59,6 +60,7 @@ var body: some View {
             SettingsView()
         }
     }
+    .toolbar(.hidden, for: .navigationBar)
     .background(
         NavigationLink(
             destination: DetailLoadingView(coin: $selectedCoin),
@@ -115,7 +117,7 @@ private var allCoinsList: some View {
                 }
                 .swipeActions(allowsFullSwipe: true) {
                     Button(action: { addCoinOnSwipeAction(coin: coin) }, label: {
-                        Image(systemName: "plus")
+                        Image(systemName: "")
                     })
                         .tint(.green)
                     

@@ -10,7 +10,6 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var vm = SettingsViewModel()
-    @State private var showAppInfoView: Bool = false
     
     var body: some View {
         NavigationView {

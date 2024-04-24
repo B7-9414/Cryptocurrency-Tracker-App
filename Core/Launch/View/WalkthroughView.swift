@@ -5,6 +5,7 @@
 //  Created by Bassam on 4/7/24.
 //
 
+
 import SwiftUI
 
 struct WalkthroughView: View {
@@ -12,7 +13,8 @@ struct WalkthroughView: View {
     @State private var emailID: String = ""
     @State private var keyboardHeight: CGFloat = 0
     @State private var shouldNavigateToHome: Bool = false
-
+    @StateObject private var keyboard = KeyboardResponder()
+    @AppStorage("hasCompletedWalkthrough") private var hasCompletedWalkthrough = false
     var body: some View {
         GeometryReader { geometry in
             let size = geometry.size
@@ -31,6 +33,7 @@ struct WalkthroughView: View {
                         .hidden()
 
                         Button(action: {
+                            hasCompletedWalkthrough = true
                             shouldNavigateToHome = true
                             print("Continue button tapped")
                             requestNotificationPermission { granted in
@@ -48,24 +51,21 @@ struct WalkthroughView: View {
                                 .foregroundColor(.white)
                                 .padding(.vertical, 15)
                                 .frame(maxWidth: .infinity)
-                                .background(Capsule().fill(Color.black))
+                                .background(Capsule().fill(emailID.isEmpty ? Color.gray.opacity(0.5) :Color.red))
+                                .opacity(emailID.isEmpty ? 0.5 : 1.0)
                         }
+                        .disabled(emailID.isEmpty)
                         .padding(.horizontal)
+                        .padding(.bottom, 20)
                     }
                 }
+//                .keyboardAware()
+//                .padding(.bottom, keyboard.currentHeight)
+                
             }
         }
-        .padding(15)
-        .offset(y: -keyboardHeight)
-        .ignoresSafeArea(.keyboard, edges: .all)
-        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { output in
-            if let info = output.userInfo, let height = (info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height {
-                keyboardHeight = height
-            }
-        }
-        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidHideNotification)) { _ in
-            keyboardHeight = 0
-        }
+        .padding([.horizontal, .top], 15)
+        
         .animation(.spring(response: 0.5, dampingFraction: 0.8, blendDuration: 0), value: keyboardHeight)
     }
 }
@@ -134,7 +134,7 @@ struct IntroView<ActionView: View>: View {
                                 .padding(.vertical, 15)
                                 .background {
                                     Capsule()
-                                        .fill(.black)
+                                        .fill(.red)
                                 }
                         }
                         .frame(maxWidth: .infinity)
@@ -161,7 +161,7 @@ struct IntroView<ActionView: View>: View {
                 } label : {
                     Image(systemName: "chevron.left")
                         .font(.title2)
-                        .foregroundColor(.black)
+                        .foregroundColor(.red)
                         .contentShape(Rectangle())
                 }
                 .padding(10)
