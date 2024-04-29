@@ -65,7 +65,7 @@ extension DetailView {
                 .font(.headline)
                 .foregroundColor(.theme.secondaryText)
             
-//            CoinImageView(coin: vm.coin)
+            CoinImageView(coin: vm.coin)
                 .frame(width: 30)
         }
     }

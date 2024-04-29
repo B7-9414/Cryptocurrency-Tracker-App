@@ -24,7 +24,6 @@ var body: some View {
                 vm.searchText = ""
                 vm.selectedCoin = nil
             }) {
-//                AppInfoView()
                     PortfolioView()
                     .environmentObject(vm)
             }
@@ -74,7 +73,7 @@ var body: some View {
 extension HomeView {
 private var homeHeader: some View {
     HStack {
-        CircleButtonView(iconName: showPortfolioCoinsList ? "info" : "gear")
+        CircleButtonView(iconName: showPortfolioCoinsList ? "plus" : "gear")
             .onTapGesture {
                 if showPortfolioCoinsList {
                     showPortfolioSheet.toggle()
@@ -117,7 +116,7 @@ private var allCoinsList: some View {
                 }
                 .swipeActions(allowsFullSwipe: true) {
                     Button(action: { addCoinOnSwipeAction(coin: coin) }, label: {
-                        Image(systemName: "")
+                        Image(systemName: "plus")
                     })
                         .tint(.green)
                     

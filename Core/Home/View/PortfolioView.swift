@@ -51,6 +51,30 @@ extension PortfolioView {
         // otherwise will portfolio coins
         vm.searchText.isEmpty && !vm.portfolioCoins.isEmpty ? vm.portfolioCoins : vm.allCoins
     }
+    
+    private var coinLogoList: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack(spacing: 10) {
+                ForEach(searchListCoins) { coin in
+                    CoinLogoView(coin: coin)
+                        .frame(width: 75)
+                        .padding(4)
+                        .onTapGesture {
+                            withAnimation(.easeIn) {
+                                updateSelectedCoins(coin: coin)
+                            }
+                        }
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(vm.selectedCoin?.id == coin.id ?
+                                            Color.theme.green : .clear,
+                                        lineWidth: 1))
+                }
+            }
+            .padding(.vertical, 4)
+            .padding(.leading)
+        }
+    }
       
     private var portfolioInputSection: some View {
         VStack(spacing: 20) {
@@ -91,6 +115,10 @@ extension PortfolioView {
     
     private var trailingNavbarButton: some View {
         HStack {
+            if vm.showCheckmark {
+                Image(systemName: "checkmark")
+            }
+            
             if let selectedCoin = vm.selectedCoin,
                selectedCoin.currentHoldings != vm.coinsQuantityText.asDouble() {
                 Button(action: {

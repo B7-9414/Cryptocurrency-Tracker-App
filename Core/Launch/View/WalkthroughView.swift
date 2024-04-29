@@ -13,7 +13,6 @@ struct WalkthroughView: View {
     @State private var emailID: String = ""
     @State private var keyboardHeight: CGFloat = 0
     @State private var shouldNavigateToHome: Bool = false
-    @StateObject private var keyboard = KeyboardResponder()
     @AppStorage("hasCompletedWalkthrough") private var hasCompletedWalkthrough = false
     var body: some View {
         GeometryReader { geometry in

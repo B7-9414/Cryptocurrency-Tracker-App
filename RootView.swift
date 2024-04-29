@@ -33,27 +33,13 @@ struct RootView: View {
                 .environmentObject(homeVM)
             }
         }
-    }
-        
-        
-        
-//        var body: some View {
-//            ZStack {
-//                if loginVM.shouldShowLaunchView {
-//                    LaunchView()
-//                        .environmentObject(loginVM)
-//                } else if loginVM.shouldShowLoginView {
-//                    LoginScreen()
-//                        .environmentObject(loginVM)
-//                } else {
-//                    NavigationView {
-//                        HomeView()
-//                            .navigationBarHidden(true)
-//                    }
-//                    .navigationViewStyle(StackNavigationViewStyle())
-//                    .environmentObject(homeVM)
-//                }
-//            }
-//        .onChange(of: scenePhase, perform: loginVM.handleNewScenePhase)
-//    }
+        .onAppear {
+                    // This code will run when the RootView appears
+                    guard let cacheURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
+                        return
+                    }
+                    let coinImagesURL = cacheURL.appendingPathComponent("coin_images")
+                    print("coinImagesURL: \(coinImagesURL)")
+                }
+        }
 }

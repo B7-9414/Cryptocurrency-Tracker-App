@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var vm = SettingsViewModel()
+    @State private var showAppInfoView: Bool = false
     
     var body: some View {
         NavigationView {
@@ -27,6 +28,14 @@ struct SettingsView: View {
                                 .labelStyle(ColorfulIconLabelStyle(color: .blue))
                         }
 
+                    }
+                    Section {
+                        Button("About") {
+                            showAppInfoView.toggle()
+                        }
+                    }
+                    .sheet(isPresented: $showAppInfoView) {
+                        AppInfoView()
                     }
                 }
             }
