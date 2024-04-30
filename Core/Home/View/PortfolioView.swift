@@ -16,6 +16,7 @@ struct PortfolioView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
                     SearchBarView(searchText: $vm.searchText)
+                    coinLogoList
                                         
                     if vm.selectedCoin != nil {
                         portfolioInputSection

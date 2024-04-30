@@ -20,7 +20,7 @@ struct SearchBarView: View {
                 .disableAutocorrection(true)
                 .overlay(
                     Image(systemName: "multiply.circle.fill")
-                    //                    Image(systemName: "arrow.counterclockwise.circle.fill")
+                    //Image(systemName: "arrow.counterclockwise.circle.fill")
                     
                     
                         .padding()
